@@ -4,15 +4,6 @@ using Newtonsoft.Json;
 
 namespace JsonExtractor.Services;
 
-public interface IConfigurationService
-{
-    JsonExtractorConfiguration GetConfiguration();
-    T GetSection<T>(string sectionName) where T : new();
-    void UpdateConfiguration(JsonExtractorConfiguration configuration);
-    void SaveConfiguration();
-    void LoadConfiguration(string? filePath = null);
-}
-
 public class ConfigurationService : IConfigurationService
 {
     private readonly string _configFilePath;
