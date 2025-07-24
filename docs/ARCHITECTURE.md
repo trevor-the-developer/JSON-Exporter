@@ -27,24 +27,24 @@ JSON Extractor follows a **modular, service-oriented architecture** built on .NE
 │                    Console Interface Layer                  │
 ├─────────────────────────────────────────────────────────────┤
 │                    Command Layer                            │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐           │
-│  │ParseCommand │ │QueryCommand │ │ExportCommand│    ...    │
-│  └─────────────┘ └─────────────┘ └─────────────┘           │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐            │
+│  │ParseCommand │ │QueryCommand │ │ExportCommand│    ...     │
+│  └─────────────┘ └─────────────┘ └─────────────┘            │
 ├─────────────────────────────────────────────────────────────┤
 │                    Service Layer                            │
-│  ┌──────────────────┐ ┌──────────────────┐                │
-│  │JsonExtractorSvc  │ │JsonQueryService  │     ...        │
-│  └──────────────────┘ └──────────────────┘                │
+│  ┌──────────────────┐ ┌──────────────────┐                  │
+│  │JsonExtractorSvc  │ │JsonQueryService  │     ...          │
+│  └──────────────────┘ └──────────────────┘                  │
 ├─────────────────────────────────────────────────────────────┤
 │                    Utility Layer                            │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐           │
-│  │CsvExporter  │ │XmlExporter  │ │JsonExporter │    ...    │
-│  └─────────────┘ └─────────────┘ └─────────────┘           │
+│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐            │
+│  │CsvExporter  │ │XmlExporter  │ │JsonExporter │    ...     │
+│  └─────────────┘ └─────────────┘ └─────────────┘            │
 ├─────────────────────────────────────────────────────────────┤
 │                    Infrastructure Layer                     │
-│  ┌─────────────────┐ ┌─────────────────┐                  │
-│  │Logging          │ │Configuration    │      ...         │
-│  └─────────────────┘ └─────────────────┘                  │
+│  ┌─────────────────┐ ┌─────────────────┐                    │
+│  │Logging          │ │Configuration    │      ...           │
+│  └─────────────────┘ └─────────────────┘                    │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -112,7 +112,7 @@ helper.DisplayResult(result);
 - Dependency injection container setup
 - Command-line argument processing
 - Application lifecycle management
-- Error handling and logging initialization
+- Error handling and logging initialisation
 
 ### 2. Command System Architecture
 
@@ -172,7 +172,7 @@ public class CommandFactory : ICommandFactory
 - JSONPath expression parsing and execution
 - Advanced query operations (recursive search, filtering)
 - Query result aggregation and formatting
-- Performance monitoring and optimization
+- Performance monitoring and optimisation
 
 **Dual Query Engine Design:**
 ```csharp
@@ -234,7 +234,7 @@ public class ExportCommand : ICommand
 - Type registration with dependency injection
 
 **Benefits:**
-- Centralized object creation
+- Centralised object creation
 - Supports dependency injection
 - Easy to test and mock
 
@@ -253,7 +253,7 @@ public class ExportCommand : ICommand
 **Implementation:**
 - Base command execution flow
 - Common error handling patterns
-- Standardized result formatting
+- Standardised result formatting
 
 **Benefits:**
 - Consistent command behavior
@@ -269,7 +269,7 @@ public class ExportCommand : ICommand
 **Benefits:**
 - Loose coupling between components
 - Extensible notification system
-- Centralized logging and monitoring
+- Centralised logging and monitoring
 
 ## Data Flow
 
@@ -349,7 +349,7 @@ public static class ServiceContainer
 | Service Type | Lifetime | Rationale |
 |-------------|----------|-----------|
 | Commands | Singleton | Stateless, shared functionality |
-| Core Services | Singleton | Heavy initialization, stateless operations |
+| Core Services | Singleton | Heavy initialisation, stateless operations |
 | Configuration | Singleton | Application-wide settings |
 | Processors | Singleton | Orchestration components |
 
@@ -482,7 +482,7 @@ public async Task<CommandResult> ParseJsonAsync(string json, ExtractorOptions? o
 
 ### 2. Query Performance
 
-#### Query Optimization Strategies
+#### Query Optimisation Strategies
 - **Query Complexity Analysis**: Route to appropriate parser
 - **Result Caching**: Cache expensive query results
 - **Early Termination**: Stop processing when limits reached
@@ -508,7 +508,7 @@ public async Task<CommandResult> ParseJsonFromFileAsync(string filePath, Extract
 
 **Benefits:**
 - Non-blocking I/O operations
-- Better resource utilization
+- Better resource utilisation
 - Improved responsiveness
 
 ## Security Architecture
