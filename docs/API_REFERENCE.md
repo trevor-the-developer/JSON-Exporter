@@ -18,7 +18,7 @@ Technical reference documentation for all commands, options, interfaces, and mod
 JSON Extractor provides a comprehensive API through its command-line interface, built on a modular architecture with dependency injection, structured logging, and extensible design patterns.
 
 **Key Capabilities:**
-- JSON parsing and validation with customizable options
+- JSON parsing and validation with customisable options
 - Advanced JSONPath querying with full expression support
 - Multiple export formats (CSV, XML, JSON)
 - Extensible command system
@@ -171,12 +171,12 @@ dotnet run --project src/JsonExtractor export --file <file-path> <format> [jsonp
 ##### CSV Export
 - Automatic header generation from object keys
 - Proper value escaping and quoting
-- Customizable delimiters
+- Customisable delimiters
 - Handles nested objects by flattening
 
 ##### XML Export
 - Structured XML output with proper nesting
-- Customizable root and item element names
+- Customisable root and item element names
 - Attribute and element handling
 - Proper XML encoding
 
@@ -328,7 +328,7 @@ public interface IConfigurationService
 ## Models and Data Types
 
 ### CommandResult
-Standardized result wrapper for all operations.
+Standardised result wrapper for all operations.
 
 ```csharp
 public record CommandResult
